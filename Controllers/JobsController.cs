@@ -38,5 +38,12 @@ namespace TecolocoApi.Controllers
 
             return list;
         }
+        public Jobs GetJob(string id)
+        {
+            cliente = new FireSharp.FirebaseClient(config);
+            FirebaseResponse response = cliente.Get("Jobs/" + id);
+            Jobs data = JsonConvert.DeserializeObject<Jobs>(response.Body);
+            return data;
+        }
     }
 }
