@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecolocoApi", "TecolocoApi.csproj", "{FEB79FD6-92DE-4452-8946-EB46314C2E29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEB79FD6-92DE-4452-8946-EB46314C2E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB79FD6-92DE-4452-8946-EB46314C2E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB79FD6-92DE-4452-8946-EB46314C2E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB79FD6-92DE-4452-8946-EB46314C2E29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7327963F-023D-4877-B0E4-D29E64BC68F8}
+	EndGlobalSection
+EndGlobal
