@@ -45,5 +45,24 @@ namespace TecolocoApi.Controllers
             Jobs data = JsonConvert.DeserializeObject<Jobs>(response.Body);
             return data;
         }
+        [HttpPost]
+        public bool InsertJob(Jobs job)
+        {
+            bool IsOk = false;
+            try
+            {
+                job.CreateAt = DateTime.Now;
+                cliente = new FireSharp.FirebaseClient(config);
+                var data = job;
+                PushResponse response = cliente.Push("Jobs/", data);
+                data.JobID = response.Result.name;
+                SetResponse setResponse = cliente.Set("Jobs/" + data.JobID, data);
+                IsOk = true;
+            }
+            catch (Exception ex)
+            {
+            }
+            return IsOk;
+        }git
     }
 }
