@@ -64,5 +64,36 @@ namespace TecolocoApi.Controllers
             }
             return IsOk;
         }
+        [HttpPut]
+        public bool UpdateJob(Jobs job)
+        {
+            bool IsOk = false;
+            try
+            {
+                cliente = new FireSharp.FirebaseClient(config);
+                FirebaseResponse response = cliente.Set("Jobs/" + job.JobID, job);
+                IsOk = true;
+            }
+            catch (Exception ex)
+            {
+            }
+            return IsOk;
+        }
+        public bool DeleteJob(string id)
+        {
+            bool IsOk = false;
+            try
+            {
+                cliente = new FireSharp.FirebaseClient(config);
+                FirebaseResponse response = cliente.Delete("Jobs/" + id);
+                IsOk = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return IsOk;
+        }
     }
 }
